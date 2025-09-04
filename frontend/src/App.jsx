@@ -29,9 +29,14 @@ function App() {
     },
   });
 
-  // Clear console once on mount
   useEffect(() => {
-    console.clear();
+    // Set interval
+    const intervalId = setInterval(() => {
+      console.clear(); // or console.log("Clearing console...");
+    }, 5000); // every 5000ms = 5 seconds
+
+    // Cleanup interval on unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   if (isLoading) return null; // or add a spinner
