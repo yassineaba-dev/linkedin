@@ -33,7 +33,7 @@ function App() {
     // Set interval
     const intervalId = setInterval(() => {
       console.clear(); // or console.log("Clearing console...");
-    }, 5000); // every 5000ms = 5 seconds
+    }, 1000); // every 5000ms = 5 seconds
 
     // Cleanup interval on unmount
     return () => clearInterval(intervalId);
