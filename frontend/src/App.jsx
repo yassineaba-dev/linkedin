@@ -20,7 +20,8 @@ function App() {
       try {
         const res = await axiosInstance.get("/auth/me");
         return res.data;
-      } catch (err: any) {
+      } catch (err) {
+        // JS version: no TypeScript annotation
         if (err?.response?.status === 401) return null;
         toast.error(err?.response?.data?.message || "Something went wrong");
         return null;
@@ -33,7 +34,7 @@ function App() {
     console.clear();
   }, []);
 
-  if (isLoading) return null; // or a loading spinner
+  if (isLoading) return null; // or add a spinner
 
   return (
     <Layout>
