@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-
+import { useEffect } from "react";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/auth/LoginPage";
 import SignUpPage from "./pages/auth/SignUpPage";
@@ -29,6 +29,11 @@ function App() {
 	});
 
 	if (isLoading) return null;
+
+	 // Clear console once on mount (safe)
+  useEffect(() => {
+      console.clear() 
+  }, []);
 
 	return (
 		<Layout>
