@@ -2,6 +2,10 @@
 
 ![Demo App](/frontend/public/screenshot-for-readme.png)
 
+## 🚀 Live Preview
+
+👉 [Click here to view the site](https://linke-din-ys.netlify.app)
+
 About This Course:
 
 -   🚀 Project Setup
